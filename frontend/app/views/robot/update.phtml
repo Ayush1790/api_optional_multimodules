@@ -1,0 +1,21 @@
+<div class='div text-center  p-3' style="width:600px;margin-left:300px;border:2px solid lightgreen">
+<form action="../robot/robotupdate" method="post">
+    <h1>Update Robot's</h1>
+    <label>Robot Id</label>
+    <input type="number" name="id"   class="form-control" value='<?php echo $data->id;?>'>
+    <br>
+    <label>Robot Name</label>
+    <input type="text" name="name" class="form-control" value='<?php echo $data->name;?>'>
+    <br>
+    <label>Robot Quantity</label>
+    <input type="number" name="qty" class="form-control" value='<?php echo $data->qty;?>'>
+    <br>
+    <label>Robot Price</label>
+    <input type="number" name="price" class="form-control" value='<?php echo $data->price;?>'>
+    <br>
+    <label>Robot Description</label>
+    <input type="text" name="desc" class="form-control" value='<?php echo $data->desc;?>'>
+    <br><br>
+    <input type="submit" value="Update" class='btn btn-primary'>
+</form>
+</div>

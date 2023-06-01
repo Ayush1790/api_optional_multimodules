@@ -27,6 +27,7 @@ $loader->registerDirs(
 $loader->registerNamespaces(
     [
         'MyApp\Controller' => APP_PATH . '/controllers/',
+        'MyApp\Component' => APP_PATH . '/component/',
     ]
 );
 
@@ -40,6 +41,19 @@ $container->set(
         $view = new View();
         $view->setViewsDir(APP_PATH . '/views/');
         return $view;
+    }
+);
+
+$container->set(
+    'dispatcher',
+    function () {
+        $dispatcher = new Dispatcher();
+
+        $dispatcher->setDefaultNamespace(
+            'MyApp\Controllers'
+        );
+
+        return $dispatcher;
     }
 );
 

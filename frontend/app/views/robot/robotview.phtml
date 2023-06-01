@@ -1,0 +1,23 @@
+<table class="table table-striped table-bordered">
+    <caption>table shows robot details</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>description</th>
+            <th>qty</th>
+            <th>price</th>
+            <th>Action <a href='../robot' class='btn btn-primary'>Add Robot</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        foreach ($data as $value) {
+            echo "<tr><td>$value->id</td><td>$value->name</td><td>$value->desc</td><td>$value->qty</td><td>$value->price
+            </td><td><a href='../robot/update?id=$value->id' class='btn btn-warning'>Update</a>
+            <a href='../robot/delete?id=$value->id' class='btn btn-danger'>Delete</a></td></tr>";
+        }
+        ?>
+    </tbody>
+
+</table>
